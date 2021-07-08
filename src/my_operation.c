@@ -3,7 +3,7 @@
 
 #include "my.h"
 #include "my_struct_func_ptr.h"
-#include "my_operand.h"
+#include "my_operation.h"
 
 int	my_add(int val1, int val2)
 {

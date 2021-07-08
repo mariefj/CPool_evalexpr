@@ -1,8 +1,9 @@
 NAME	=	eval_expr
 
-SRCS	=	src/main.c		\
-		src/eval_expr.c		\
-		src/my_operand.c	\
+SRCS	=	src/main.c			\
+		src/eval_expr.c			\
+		src/my_operation.c		\
+		src/stack_op.c			\
 		src/my_struct_func_ptr.c
 
 OBJS	=	$(SRCS:.c=.o)
