@@ -1,13 +1,9 @@
-#ifndef _MY_STRUCT_FUNC_PTR_H_
-#define _MY_STRUCT_FUNC_PTR_H_
+#include <unistd.h>
+#include <stdlib.h>
 
-#define OPERTOR_NB 5
-
-typedef struct	my_struct_func_ptr_s
-{
-		char	op;
-		int	(*operand)(int, int);
-}		my_struct_func_ptr_t;
+#include "my.h"
+#include "my_struct_func_ptr.h"
+#include "my_operand.h"
 
 void set_up_struct(my_struct_func_ptr_t *ops)
 {
@@ -43,5 +39,3 @@ int do_op(char op, int val1, int val2)
 	my_putstr("Bad op\n");
 	exit(84);
 }
-
-#endif // _MY_STRUCT_FUNC_PTR_H_
