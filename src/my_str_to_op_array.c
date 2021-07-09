@@ -86,7 +86,7 @@ static char	*get_op(char **str, int *is_number)
 		op = my_append_c(op, **str);
 		(*str)++;
 		if (is_digit(**str) || (is_digit(*(*str + 1)) && **str == '-' && *(*str - 1) != ')'))
-			*is_number = 1;
+			*is_number = !(*is_number);
 	}
 
 	return (op);
@@ -95,7 +95,8 @@ static char	*get_op(char **str, int *is_number)
 char	**my_str_to_op_array(char *str)
 {
 	int i = 0;
-	int is_number = 1;
+	int is_number = is_digit(*str) || (*str == '-' && is_digit(*(str + 1)));
+	printf("is number = %d\n", is_number);
 	int size = get_nb_op(str) * 2 + 1 + get_nb_parenthesis(str);
 	char **array = (char **)malloc((size + 1) * sizeof(char *));
 
