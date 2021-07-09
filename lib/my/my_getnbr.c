@@ -33,6 +33,8 @@ int	my_getnbr(char const *str)
 		nb = nb * 10 + (str[i] - '0');
 		i++;
 	}
+	#include <stdio.h>
+	printf("for str=%s => str[%d] = %c\n", str, start, str[start]);
 	if (str[start] == '-')
 	{
 		nb *= -1;

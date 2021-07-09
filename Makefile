@@ -4,6 +4,9 @@ SRCS	=	src/main.c			\
 		src/eval_expr.c			\
 		src/my_operation.c		\
 		src/stack_op.c			\
+		src/my_str_to_op_array.c	\
+		src/infix_to_postfix.c		\
+		src/eval_postfix.c		\
 		src/my_struct_func_ptr.c
 
 OBJS	=	$(SRCS:.c=.o)

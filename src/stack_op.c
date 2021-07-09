@@ -43,4 +43,3 @@ void push(my_struct_stack_t *stack, int elem)
 {
 	stack->array[++stack->top] = elem;
 }
-

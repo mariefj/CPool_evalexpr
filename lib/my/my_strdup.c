@@ -7,7 +7,7 @@
 char	*my_strdup(char const *str)
 {
 	int i = 0;
-	char *strcpy = (char *)malloc(my_strlen(str) * sizeof(char));
+	char *strcpy = (char *)malloc((my_strlen(str) + 1) * sizeof(char));
 
 	if (strcpy == NULL)
 		return (NULL);
@@ -16,6 +16,7 @@ char	*my_strdup(char const *str)
 		strcpy[i] = str[i];
 		i++;
 	}
+	strcpy[i] = '\0';
 
 	return (strcpy);
 }

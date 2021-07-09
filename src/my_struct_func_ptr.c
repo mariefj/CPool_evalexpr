@@ -23,13 +23,29 @@ void set_up_struct(my_struct_func_ptr_t *ops)
 	ops[4].operation = &my_mod;
 }
 
-int do_op(char op, int val1, int val2)
+int	is_valid_op(char op)
 {
-	my_struct_func_ptr_t	ops[OPERTOR_NB];
+	my_struct_func_ptr_t	ops[OPERATOR_NB];
 	int			i = 0;
 
 	set_up_struct(ops);
-	while (i != OPERTOR_NB)
+	while (i != OPERATOR_NB)
+	{
+		if (ops[i].op == op)
+			return (1);
+		i++;
+	}
+
+	return (0);
+}
+
+int do_op(char op, int val1, int val2)
+{
+	my_struct_func_ptr_t	ops[OPERATOR_NB];
+	int			i = 0;
+
+	set_up_struct(ops);
+	while (i != OPERATOR_NB)
 	{
 		if (ops[i].op == op)
 			return (ops[i].operation(val1, val2));
