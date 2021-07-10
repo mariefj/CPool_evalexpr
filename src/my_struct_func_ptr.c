@@ -5,7 +5,7 @@
 #include "my_struct_func_ptr.h"
 #include "my_operation.h"
 
-void set_up_struct(my_struct_func_ptr_t *ops)
+void 	set_up_struct(my_struct_func_ptr_t *ops)
 {
 	ops[0].op = '+';
 	ops[0].operation = &my_add;
@@ -39,7 +39,7 @@ int	is_valid_op(char op)
 	return (0);
 }
 
-int do_op(char op, int val1, int val2)
+int 	do_op(char op, int val1, int val2)
 {
 	my_struct_func_ptr_t	ops[OPERATOR_NB];
 	int			i = 0;

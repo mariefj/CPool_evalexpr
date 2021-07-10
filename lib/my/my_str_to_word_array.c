@@ -31,24 +31,6 @@ static int	my_get_nb_words(char const *str)
 	return (nb_words);
 }
 
-static char	*my_append_c(char *str, char c)
-{
-	int i = 0;
-	int len = my_strlen(str) + 2;
-	char *new_str = (char *)malloc(len * sizeof(char));
-
-	while (str[i] != '\0')
-	{
-		new_str[i] = str[i];
-		i++;
-	}
-	new_str[i] = c;
-	new_str[i + 1] = '\0';
-	free(str);
-
-	return (new_str);
-}
-
 static int	my_nb_words(char const *str, int nb_words, int i)
 {
 	if (i == 0 && my_isalpha(str[i]) == 1)

@@ -37,6 +37,9 @@ char	*my_strncat(char *dest, char const *src, int nb);
 char	*my_strdup(char const *str);
 int	my_show_word_array(char * const *tab);
 char	**my_str_to_word_array(char const *str);
-
+int	print_str_array(const char **array);
+int	is_digit(char digit);
+char	*my_append_c(char *str, char c);
+int	my_tab_size(const char **array);
 
 #endif

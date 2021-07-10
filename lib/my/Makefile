@@ -35,6 +35,10 @@ SRCS	=	my_compute_power_rec.c		\
 		my_strupcase.c			\
 		my_swap.c			\
 		my_showaddr.c			\
+		is_digit.c			\
+		print_str_array.c		\
+		my_append_c.c			\
+		my_tab_size.c			\
 		my_putnbr_base.c
 
 

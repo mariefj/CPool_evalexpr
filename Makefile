@@ -6,6 +6,7 @@ SRCS	=	src/main.c			\
 		src/stack_op.c			\
 		src/my_str_to_op_array.c	\
 		src/infix_to_postfix.c		\
+		src/utils_infix_to_postfix.c	\
 		src/eval_postfix.c		\
 		src/my_struct_func_ptr.c
 

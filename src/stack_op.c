@@ -21,12 +21,12 @@ my_struct_stack_t *stack_init(int size)
 	return (stack);
 }
 
-int is_empty(my_struct_stack_t *stack)
+int 	is_empty(my_struct_stack_t *stack)
 {
 	return (stack->top == -1);
 }
 
-int pop(my_struct_stack_t *stack)
+int 	pop(my_struct_stack_t *stack)
 {
 	if (!is_empty(stack))
 		return (stack->array[stack->top--]);
@@ -34,12 +34,12 @@ int pop(my_struct_stack_t *stack)
 	return (84);
 }
 
-int peek(my_struct_stack_t *stack)
+int 	peek(my_struct_stack_t *stack)
 {
 	return (stack->array[stack->top]);
 }
 
-void push(my_struct_stack_t *stack, int elem)
+void 	push(my_struct_stack_t *stack, int elem)
 {
 	stack->array[++stack->top] = elem;
 }
