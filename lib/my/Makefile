@@ -39,6 +39,7 @@ SRCS	=	my_compute_power_rec.c		\
 		print_str_array.c		\
 		my_append_c.c			\
 		my_tab_size.c			\
+		free_str_tab.c			\
 		my_putnbr_base.c
 
 

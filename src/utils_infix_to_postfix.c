@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 #include "my.h"
 #include "utils_infix_to_postfix.h"

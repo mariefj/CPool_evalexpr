@@ -1,7 +1,5 @@
-#include <unistd.h>
 #include <stdlib.h>
 
-#include "my.h"
 #include "my_struct_stack.h"
 
 my_struct_stack_t *stack_init(int size)
@@ -9,14 +7,14 @@ my_struct_stack_t *stack_init(int size)
 	my_struct_stack_t *stack = (my_struct_stack_t *)malloc(sizeof(my_struct_stack_t));
 
 	if (!stack)
-		return (NULL);
+		exit(84);
 
 	stack->top = -1;
 	stack->size = size;
 	stack->array = (int *)malloc(stack->size * sizeof(int));
 
 	if (!stack->array)
-		return (NULL);
+		exit(84);
 
 	return (stack);
 }

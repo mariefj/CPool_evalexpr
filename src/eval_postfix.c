@@ -1,18 +1,16 @@
 #include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
+#include <stdlib.h> // free
 
 #include "my.h"
 #include "eval_postfix.h"
-#include "eval_expr.h"
-#include "my_str_to_op_array.h"
 #include "my_struct_stack.h"
 #include "my_struct_func_ptr.h"
 
 int	eval_postfix(const char **array_postfix)
 {
-	int i = 0;
-	my_struct_stack_t *stack = stack_init(my_tab_size(array_postfix));
+	int 			i = 0;
+	my_struct_stack_t	*stack = stack_init(my_tab_size(array_postfix));
+	int			result;
 
 	if (stack == NULL)
 		return (-1);
@@ -25,6 +23,9 @@ int	eval_postfix(const char **array_postfix)
 			push(stack, do_op(array_postfix[i][0], pop(stack), pop(stack)));
 		i++;
 	}
+	result = pop(stack);
+	free(stack->array);
+	free(stack);
 
-	return (pop(stack));
+	return (result);
 }

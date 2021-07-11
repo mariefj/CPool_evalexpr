@@ -41,5 +41,6 @@ int	print_str_array(const char **array);
 int	is_digit(char digit);
 char	*my_append_c(char *str, char c);
 int	my_tab_size(const char **array);
+void	free_str_tab(char **array);
 
 #endif
